@@ -1,58 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@300..700&display=swap');
 
-/* Basic reset */
+/* Basic styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Poppins', sans-serif;
-    color: #6D7365; /* primary text color based on palette */
-    background-color: #BEDEDC; /* light background from palette */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Adjust background color to match your theme */
 }
 
-header, section {
-    padding: 20px;
-}
-
-/* Navigation */
 nav {
-    background: #D0959F; /* pink shade from palette */
-    color: white;
+    background-color: #fff; /* Light background for the nav */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 10px 20px;
-    text-align: center;
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
+    color: #333;
+    margin: 0 20px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-/* Section styling */
 section {
-    margin-top: 60px;
-    padding: 50px 20px;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 60px; /* To avoid overlap with fixed navbar */
 }
 
-/* Home section */
-#home {
-    background-color: #BEDFDC; /* slight variation for visual interest */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* Project card */
 .project {
-    background: white;
+    background-color: #ffffff;
+    border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
 }
 
 .project img {
@@ -61,9 +56,29 @@ section {
     border-radius: 8px;
 }
 
-.footer {
+.skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.skills li {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
     text-align: center;
     padding: 20px;
-    background-color: #97B5AF;
-    color: white;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills ul {
+        grid-template-columns: 1fr 1fr; /* Adapt grid for smaller screens */
+    }
 }
